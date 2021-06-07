@@ -22,7 +22,13 @@ const toggleVideoStatus = () => {
   }
 };
 
-const updatePlayIcon = () => {};
+const updatePlayIcon = () => {
+  if (htmlElements.video.paused) {
+    htmlElements.play.innerHTML = '<i class="fa fa-play fa-2x"></i>';
+  } else {
+    htmlElements.play.innerHTML = '<i class="fa fa-pause fa-2x"></i>';
+  }
+};
 
 const updateProgress = () => {};
 
