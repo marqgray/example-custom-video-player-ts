@@ -30,7 +30,11 @@ const updatePlayIcon = () => {
   }
 };
 
-const updateProgress = () => {};
+const updateProgress = () => {
+  htmlElements.progress.value = String(
+    (htmlElements.video.currentTime / htmlElements.video.duration) * 100
+  );
+};
 
 const stopVideo = () => {
   htmlElements.video.currentTime = 0;
