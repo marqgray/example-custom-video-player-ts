@@ -32,7 +32,10 @@ const updatePlayIcon = () => {
 
 const updateProgress = () => {};
 
-const stopVideo = () => {};
+const stopVideo = () => {
+  htmlElements.video.currentTime = 0;
+  htmlElements.video.pause();
+};
 
 const setVideoProgress = () => {};
 
