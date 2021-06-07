@@ -41,7 +41,10 @@ const stopVideo = () => {
   htmlElements.video.pause();
 };
 
-const setVideoProgress = () => {};
+const setVideoProgress = () => {
+  htmlElements.video.currentTime =
+    (+htmlElements.progress.value * htmlElements.video.duration) / 100;
+};
 
 htmlElements.video.addEventListener("click", toggleVideoStatus);
 htmlElements.video.addEventListener("play", updatePlayIcon);
